@@ -1,0 +1,6 @@
+1. Error state - little comment
+- Using ::after
+
+2. Symbols to show if something is valid or not
+
+

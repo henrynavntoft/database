@@ -1,0 +1,187 @@
+/* Import Roboto font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #333;
+  --background-color: #f4f4f4;
+  --form-background-color: #fff;
+  --error-color: #dc3545;
+  --success-color: #28a745;
+  --font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+select,
+article {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+form {
+  background-color: var(--form-background-color);
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--secondary-color);
+}
+
+fieldset {
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--secondary-color);
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="checkbox"] {
+  margin-left: 5px;
+}
+
+input[type="submit"] {
+  display: block;
+  background-color: var(--secondary-color);
+  color: var(--form-background-color);
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+/* Focus */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 3px var(--primary-color);
+}
+
+/* Hover */
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--primary-color);
+}
+
+/* Valid */
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: var(--success-color);
+}
+
+/* Invalid */
+input:invalid:not(:placeholder-shown, :focus),
+textarea:invalid:not(:placeholder-shown, :focus) {
+  border-color: var(--error-color);
+  animation: shake 0.2s 2 backwards;
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+input::placeholder {
+  opacity: 0;
+}
+
+/**/
+
+article {
+  background-color: var(--form-background-color);
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+button.update,
+button.delete {
+  background-color: var(--secondary-color);
+  color: var(--form-background-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button.update:hover,
+button.delete:hover {
+  background-color: #555;
+}
+
+button.delete {
+  background-color: #c0392b;
+}
+
+button.delete:hover {
+  background-color: #e74c3c;
+}

@@ -2,16 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Database</title>
+    <title>WINES</title>
 </head>
 
 <body>
+    <form id="wine-form">
 
+        <label for="name">Wine Name:</label>
+        <input type="text" placeholder="abc" id="name" required>
+        <br>
+
+        <label for="type">Wine Type:</label>
+        <select id="type" required>
+            <option value="">Choose a type</option>
+            <option value="red">Red</option>
+            <option value="white">White</option>
+            <option value="rose">Rosé</option>
+            <option value="sparkling">Sparkling</option>
+            <option value="dessert">Dessert</option>
+        </select>
+        <br>
+
+        <label for="isGood">Is this wine good?</label>
+        <input placeholder="abc" type="checkbox" id="isGood">
+        <br>
+
+        <label for="year">Year:</label>
+        <input placeholder="abc" type="number" id="year" min="1900" max="2023" required>
+        <small>Has to be after 1900 and before today</small>
+        <br>
+
+        <fieldset>
+            <legend>Origin</legend>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" list="countries" placeholder="Select a country" required>
+            <datalist id="countries"></datalist>
+            <br>
+
+            <label for="region">Region:</label>
+            <input type="text" id="region" list="regions" placeholder="Select a region" required>
+            <datalist id="regions"></datalist>
+            <br>
+        </fieldset>
+
+
+        <label for="grapes">Grapes:</label>
+        <input placeholder="abc" type="text" id="grapes" required>
+        <br>
+
+        <input type="submit" value="Post New Wine">
+
+    </form>
+
+    <main></main>
+    <template>
+        <article>
+            <h2>NAME HERE</h2>
+            <button class="update">Update Wine</button>
+            <button class="delete">Delete Wine</button>
+        </article>
+    </template>
+    <script type="module" src="main.js"></script>
 </body>
-
-</html>
